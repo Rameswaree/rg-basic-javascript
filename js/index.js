@@ -49,7 +49,10 @@ deleteBtn.addEventListener("click", removeAll);
 function removeAll(){
     const result = confirm("Are you sure?");
     if (result) { 
-            
+         
+	 if(!lst.firstChild){
+	    alert("Nothing to delete!!");
+         }
          while (lst.firstChild) {
             lst.removeChild(lst.firstChild);
         }
